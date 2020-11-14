@@ -4,6 +4,7 @@ import copy
 import json
 from ..items import KsshopdataItem
 import re
+import logging
 
 class KsshopSpider(scrapy.Spider):
     name = 'ksshortshop'
@@ -77,7 +78,7 @@ class KsshopSpider(scrapy.Spider):
 
         else:
             print("此次请求出错！")
-            print(shop_info['error_msg'])
+            logging.error(shop_info['error_msg'])
 
 
 
